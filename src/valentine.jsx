@@ -153,19 +153,22 @@ export default function valentine() {
                 </button>
 
                 {/* NO */}
-                <button
-                    onMouseEnter={moveNo}
-                    style={{
-                        display: 'block',
-                        padding: '14px 26px',
-                        fontSize: 18,
-                        cursor: 'pointer',
-                        position: noMoved ? 'absolute' : 'static',
-                        left: noMoved ? `${noPos.x}%` : 'auto',
-                        top: noMoved ? `${noPos.y}%` : 'auto'
-                    }}
+              <button
+                onMouseEnter={moveNo}     // desktop
+                onFocus={moveNo}          // TAB / teclado
+                onTouchStart={moveNo}     // mobile touch
+                tabIndex={0}
+                style={{
+                    display: 'block',
+                    padding: '14px 26px',
+                    fontSize: 18,
+                    cursor: 'pointer',
+                    position: noMoved ? 'absolute' : 'static',
+                    left: noMoved ? `${noPos.x}%` : 'auto',
+                    top: noMoved ? `${noPos.y}%` : 'auto'
+                }}
                 >
-                    NO 😈
+                NO 😈
                 </button>
             </div>
         </div>
