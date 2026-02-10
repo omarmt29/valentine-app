@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { supabase } from './supabase'
 import { useEffect, useState } from 'react'
+import Swal from 'sweetalert2'
 
 export default function valentine() {
     const { slug } = useParams()
@@ -55,6 +56,29 @@ export default function valentine() {
         setscaled(true)
 
     }
+
+    const copyLink = async () => {
+        const url = window.location.href
+
+        try {
+            await navigator.clipboard.writeText(url)
+
+            Swal.fire({
+            icon: 'success',
+            title: '¡Link copiado! 💖',
+            text: 'Comparte esta invitación con tu persona especial',
+            timer: 2500,
+            showConfirmButton: false
+            })
+        } catch (error) {
+            Swal.fire({
+            icon: 'error',
+            title: 'Oops 😢',
+            text: 'No se pudo copiar el link'
+            })
+        }
+    }
+
     if (loading) {
     return (
         <div style={{ height: '100dvh', display: 'grid', placeItems: 'center' }}>
@@ -81,7 +105,25 @@ export default function valentine() {
                 textAlign: 'center',
                 position: 'relative'
             }}
-        >
+        >   
+            {/* compartir invitacion */}
+            <button
+                onClick={copyLink}
+                style={{
+                    marginBottom: 30,
+                    padding: '10px 20px',
+                    fontSize: 14,
+                    borderRadius: 8,
+                    border: '1px solid #ddd',
+                    cursor: 'pointer',
+                    background: '#fff',
+                    color: "black"
+                }}
+                >
+                🔗 Copiar invitación
+            </button>
+            {/* compartir invitacion */}
+
             <h1 style={{ marginBottom: 50 }}>
                 {name} will you be my valentine? 💖
             </h1>

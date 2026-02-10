@@ -37,7 +37,7 @@ export default function Home() {
       <br /><br />
 
       <button onClick={createValentine}>
-        Crear página
+        Crear invitación  
       </button>
     </div>
   )
