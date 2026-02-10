@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { supabase } from './supabase'
 import { useEffect, useState } from 'react'
 
-export default function Valentine() {
+export default function valentine() {
     const { slug } = useParams()
     const [showGif, setShowGif] = useState(false)
 
