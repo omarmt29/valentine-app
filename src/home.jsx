@@ -39,6 +39,32 @@ export default function Home() {
       <button onClick={createValentine}>
         Crear invitación  
       </button>
+
+        <footer
+            style={{
+                position: 'fixed',
+                bottom: 12,
+                width: '100%',
+                textAlign: 'center',
+                fontSize: 13,
+                color: '#888'
+            }}
+            >
+            Desarrollado por{' '}
+            <a
+                href="https://www.instagram.com/omarmt29"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                color: '#e1306c',
+                textDecoration: 'none',
+                fontWeight: 600
+                }}
+            >
+                Omar Méndez
+            </a>
+        </footer>
+
     </div>
   )
 }
