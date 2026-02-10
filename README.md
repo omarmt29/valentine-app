@@ -1,6 +1,6 @@
 # 💖 Valentine App
 
-Una aplicación web hecha con **React + Vite + Supabase** que permite crear páginas personalizadas de San Valentín usando una **URL única (slug)**.  
+Una aplicación web hecha con **React + Vite + Supabase** que permite crear páginas personalizadas de San Valentín.
 Cada enlace muestra un mensaje especial para una persona y una interacción divertida donde decir **NO es casi imposible 😈**.
 
 ---
